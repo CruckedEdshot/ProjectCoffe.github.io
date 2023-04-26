@@ -7,9 +7,9 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free Website Template" name="keywords">
     <meta content="Free Website Template" name="description">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
     <!-- Favicon -->
-    <link href="/img/caffecito.ico" rel="icon">
+    <link href="img/caffecito.ico" rel="icon">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -23,7 +23,7 @@
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -42,12 +42,7 @@
                     <a href="#about" class="nav-item nav-link navbar">About</a>
                     <a href="#service" class="nav-item nav-link navbar">Service</a>
                     <a href="#menu" class="nav-item nav-link navbar">Menu</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu text-capitalize">
-                            <a href="#reservation.html" class="dropdown-item navbar">Reservation</a>
-                            <a href="#testimonial.html" class="dropdown-item navbar">Testimonial</a>
-                        </div>
+                    
                     </div>
                     <a href="#contact" class="nav-item nav-link navbar">Contact</a>
                 </div>
@@ -199,86 +194,19 @@
     <!-- Offer End -->
 
 
-    <!-- Menu Start -->
+   <!-- Menu Start -->
+   <section>
     <div class="container-fluid pt-5">
         <div class="container">
-            <div class="section-title">
-                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Menu & Pricing</h4>
-                <h1 class="display-4">Competitive Pricing</h1>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <h1 class="mb-5">Hot Coffee</h1>
-                    <div class="row align-items-center mb-5">
-                        <div class="col-4 col-sm-3">
-                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-1.jpg" alt="">
-                            <h5 class="menu-price">$5</h5>
-                        </div>
-                        <div class="col-8 col-sm-9">
-                            <h4>Black Coffee</h4>
-                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor</p>
-                        </div>
-                    </div>
-                    <div class="row align-items-center mb-5">
-                        <div class="col-4 col-sm-3">
-                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-2.jpg" alt="">
-                            <h5 class="menu-price">$7</h5>
-                        </div>
-                        <div class="col-8 col-sm-9">
-                            <h4>Chocolete Coffee</h4>
-                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor</p>
-                        </div>
-                    </div>
-                    <div class="row align-items-center mb-5">
-                        <div class="col-4 col-sm-3">
-                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-3.jpg" alt="">
-                            <h5 class="menu-price">$9</h5>
-                        </div>
-                        <div class="col-8 col-sm-9">
-                            <h4>Coffee With Milk</h4>
-                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <h1 class="mb-5">Cold Coffee</h1>
-                    <div class="row align-items-center mb-5">
-                        <div class="col-4 col-sm-3">
-                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-1.jpg" alt="">
-                            <h5 class="menu-price">$5</h5>
-                        </div>
-                        <div class="col-8 col-sm-9">
-                            <h4>Black Coffee</h4>
-                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor</p>
-                        </div>
-                    </div>
-                    <div class="row align-items-center mb-5">
-                        <div class="col-4 col-sm-3">
-                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-2.jpg" alt="">
-                            <h5 class="menu-price">$7</h5>
-                        </div>
-                        <div class="col-8 col-sm-9">
-                            <h4>Chocolete Coffee</h4>
-                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor</p>
-                        </div>
-                    </div>
-                    <div class="row align-items-center mb-5">
-                        <div class="col-4 col-sm-3">
-                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-3.jpg" alt="">
-                            <h5 class="menu-price">$9</h5>
-                        </div>
-                        <div class="col-8 col-sm-9">
-                            <h4>Coffee With Milk</h4>
-                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <div class="section-title">
+            <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Menu</h4>
+            <h1 class="display-4">Nuestra variedad</h1>
+          </div>
+          <div class="row" id="menu-container">
+          </div>
         </div>
-    </div>
-    <!-- Menu End -->
-
-
+      </div>
+   </section>
     <!-- Contact Start -->
     <div class="container-fluid my-5">
         <div class="container">
@@ -300,23 +228,27 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="text-center p-5" style="background: rgba(51, 33, 29, .8);">
-                            <h1 class="text-white mb-4 mt-5">Contacto</h1>
-                            <form class="mb-5">
+                            <h1 class="text-white mb-4 mt-5" >Contacto</h1>
+                            <form class="mb-5" id="contact-form">
                                 <div class="form-group">
-                                    <input type="text" class="form-control bg-transparent border-primary p-4" placeholder="Nombre y Apellido"
+                                    <input type="text" class="form-control bg-transparent border-primary p-4" id="nombre"name="nombre" placeholder="Nombre y Apellido"
                                          />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control bg-transparent border-primary p-4" placeholder="Email"
+                                    <input type="text" class="form-control bg-transparent border-primary p-4" id="email"name="email" placeholder="Email"
                                          />
                                 </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control bg-transparent border-primary p-4" id="asunto" name="asunto" placeholder="Asunto"
+                                         />
                                 <div class="form-group">
                                     <div class="date" id="date" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-transparent border-primary p-4 datetimepicker-input" placeholder="Fecha" data-target="#date" data-toggle="datetimepicker"/>
+                                        <input type="text" class="form-control bg-transparent border-primary p-4" id="mensaje" name="mensaje" placeholder="Mensaje"
+                                         />
                                     </div>
                                 </div>
                                 
-                                </div>
+                                
                     
                                 <div>
                                     <button class="btn btn-primary btn-block font-weight-bold py-3" type="submit">Consultanos !!</button>
@@ -428,7 +360,7 @@
         </div>
         <div class="container-fluid text-center text-white border-top mt-4 py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
             <p class="mb-2 text-white">Copyright &copy; <a class="font-weight-bold" href="#">Project Coffe</a>. All Rights Reserved.</a></p>
-            <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://www.linkedin.com/in/facundo-acosta-582b4a232/">Facundo Acosta</a></p>
+            <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://github.com/CruckedEdshot">Facundo Acosta</a></p>
         </div>
     </div>
     <!-- Footer End -->
@@ -448,12 +380,21 @@
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
+    
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
+    <!-- jsPDF -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.1/jspdf.debug.js" integrity="sha512-RbC6buTUvpHRNPIeunxmQXp66uAqxt/T5ACNM7qmUey/KvbihbhPFZpDcqmJCsc00+Zuwr/Cn3uqdJS+6i+Gng==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+    
+    
+    
+    <!-- validate.js -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
 </body>
 
 </html>
