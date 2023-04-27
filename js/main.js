@@ -1,25 +1,5 @@
 (function ($) {
-    "use strict";
     
-    // Dropdown on mouse hover
-    $(document).ready(function () {
-        function toggleNavbarMethod() {
-            if ($(window).width() > 992) {
-                $('.navbar .dropdown').on('mouseover', function () {
-                    $('.dropdown-toggle', this).trigger('click');
-                }).on('mouseout', function () {
-                    $('.dropdown-toggle', this).trigger('click').blur();
-                });
-            } else {
-                $('.navbar .dropdown').off('mouseover').off('mouseout');
-            }
-        }
-        toggleNavbarMethod();
-        $(window).resize(toggleNavbarMethod);
-    });
-
-    
-
     $(".navbar .nav-link").on('click', function(event) {
 
         if (this.hash !== "") {
@@ -53,15 +33,6 @@
     });
     
 
-    // Date and time picker
-    $('.date').datetimepicker({
-        format: 'L'
-    });
-    $('.time').datetimepicker({
-        format: 'LT'
-    });
-
-
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
@@ -94,11 +65,11 @@ window.onload = function() {
       url: "https://api.sampleapis.com/coffee/hot",
       method: "GET",
       success: function(data) {
-        const lastItem = data.pop();
+       let midata = data.slice(0,10)
         const menuContainer = $("#menu-container");
         menuContainer.empty();
 
-        data.forEach(item => {
+        midata.forEach(item => {
           const description = item.description.substring(0, 40) + (item.description.length > 40 ? "..." : "");
           menuContainer.append(`
             <div class="col-lg-6">
@@ -263,7 +234,7 @@ function validateForm() {
     Object.keys(validationErrors).forEach(function (field) {
       const fieldErrors = validationErrors[field];
       fieldErrors.forEach(function (errorMessage) {
-        errorMessages += `${field}: ${errorMessage}<br>`;
+        errorMessages += ` ${errorMessage}<br>`;
       });
     });
     Swal.fire({
